@@ -55,13 +55,13 @@ app.use((err, req, res) => {
   console.error(err);
   res.status(500).send(err.response || 'Something broke!');
 });
-/*
+
 const PORT = 8081;
 if (module === require.main) {
   const server = app.listen(PORT, () => {
     const port = server.address().port;
     console.log(`App listening on port ${port}`);
   });
-}*/
+}
 
 module.exports = app;

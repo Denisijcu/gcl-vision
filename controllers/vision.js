@@ -9,7 +9,7 @@ const router = express.Router();
 router.use(bodyParser.json());
 
 
-let imageUrl = 'images/shakira.jpg';
+let imageUrl = 'images/gravatar2.jpg';
 let title = '';
 
 async function quickstart(imageUrl) {
