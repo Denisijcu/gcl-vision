@@ -1,0 +1,36 @@
+<%- include('./includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/mystyle.css">
+    </head>
+
+<%- include('./includes/navigation.ejs') %>
+
+<h1>Images Vision</h1>
+
+
+<main>
+   
+    <form action="/vision" method="POST" enctype="multipart/form-data">
+        <div class="form-control">
+            <label for="title">Title</label>
+            <input 
+                class=""
+                type="text" 
+                name="title" 
+                id="title" >
+        </div>
+      
+        <div class="form-control">
+            <label for="image">Image</label>
+            <input 
+                type="file" 
+                name="image" 
+                id="image"
+                >
+        </div>
+       
+        <button class="btn" type="submit">Submit</button>
+    </form>
+
+
+</main>
+<%- include('./includes/end.ejs') %>

@@ -1,0 +1,11 @@
+.container{
+   background-color: beige;
+}
+
+.info {
+    display:flex
+}
+.dv1, .dv2{
+    margin-left: 5rem;
+    padding: 3rem;
+}
