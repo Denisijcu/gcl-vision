@@ -8,7 +8,7 @@ const multer = require('multer');
 
 const fileStorage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, 'images');
+    cb(null, 'images','audio');
   },
   filename: (req, file, cb) => {
     cb(null, file.originalname);
@@ -23,7 +23,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.set('trust proxy', true);
 
-app.use(multer({storage: fileStorage}).single('image'));
+app.use(multer({storage: fileStorage}).single('image','audio'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'images')));
 
@@ -31,6 +31,8 @@ app.use('/', require('./controllers/home'));
 app.get('/about', require('./controllers/about'));
 app.get('/vision', require('./controllers/vision'));
 app.post('/vision', require('./controllers/vision'));
+app.get('/audio', require('./controllers/audio'));
+app.post('/audio', require('./controllers/audio'));
 
 /*
 app.get('/about', (req, res, next) => {
